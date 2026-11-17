@@ -64,7 +64,7 @@ python3 path/to/skills/review-playbook/scripts/review_context.py --base HEAD~3
 python3 path/to/skills/review-playbook/scripts/review_context.py --json
 ```
 
-Requires Python 3.8 or newer and git.
+Requires Python 3.9 or newer and git.
 
 ## What the checklists cover
 
