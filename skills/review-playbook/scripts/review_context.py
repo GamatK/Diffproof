@@ -10,7 +10,7 @@ reports:
     (possible secrets, skipped tests, disabled safety checks, debug output...)
   * the build, test and lint commands this project appears to use
 
-It only reads; it never changes files. It needs Python 3.9+ and git, and has
+It only reads; it never changes files. It needs Python 3.10+ and git, and has
 no other dependencies.
 
 Usage:

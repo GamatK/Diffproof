@@ -3,7 +3,7 @@
 ## 1.2.0 (2026-11-17)
 
 - Added `scripts/review_context.py`, an evidence helper that reads the git diff and reports a suggested risk level, the checklists that apply, warnings in added lines with file and line (masked possible secrets, skipped tests, disabled checks, unsafe code patterns, destructive SQL, empty catch blocks, leftover debug output), and the project's build, test and lint commands.
-- Added unit tests for the helper and a GitHub Actions workflow that runs them on Python 3.9 and 3.13.
+- Added unit tests for the helper and a GitHub Actions workflow that runs them on Python 3.10 and 3.14.
 - `SKILL.md` now starts reviews by gathering evidence with the helper when commands can be run.
 
 ## 1.1.0 (2026-11-17)
