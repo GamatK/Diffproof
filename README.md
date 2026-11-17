@@ -1,6 +1,6 @@
 # Review Playbook
 
-[![tests](https://github.com/GamatK/Claude-Review-Playbook/actions/workflows/tests.yml/badge.svg)](https://github.com/GamatK/Claude-Review-Playbook/actions/workflows/tests.yml)
+[![tests](https://github.com/GamatK/review-playbook/actions/workflows/tests.yml/badge.svg)](https://github.com/GamatK/review-playbook/actions/workflows/tests.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 An [Agent Skill](https://agentskills.io) that makes an AI coding assistant review its own work properly before telling you it's done, and review other people's work when you ask.
@@ -82,7 +82,7 @@ Requires Python 3.10 or newer and git.
 ### Claude Code
 
 ```text
-/plugin marketplace add GamatK/Claude-Review-Playbook
+/plugin marketplace add GamatK/review-playbook
 /plugin install review-playbook@gamatk-skills
 ```
 
