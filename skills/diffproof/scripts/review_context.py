@@ -5,7 +5,7 @@ Looks at what changed (committed on this branch plus uncommitted work), then
 reports:
 
   * a suggested risk level (low, standard, high) and the reasons for it
-  * which Review Playbook checklists apply
+  * which Diffproof checklists apply
   * warnings found in the added lines, with file and line number
     (possible secrets, skipped tests, disabled safety checks, debug output...)
   * the build, test and lint commands this project appears to use

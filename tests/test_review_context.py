@@ -1,4 +1,4 @@
-"""Tests for skills/review-playbook/scripts/review_context.py.
+"""Tests for skills/diffproof/scripts/review_context.py.
 
 Each test builds a throwaway git repository, makes a change, and checks the report.
 Run with:  python3 -m unittest discover -s tests -v
@@ -11,7 +11,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRIPT_DIR = Path(__file__).resolve().parents[1] / "skills" / "review-playbook" / "scripts"
+SCRIPT_DIR = Path(__file__).resolve().parents[1] / "skills" / "diffproof" / "scripts"
 sys.path.insert(0, str(SCRIPT_DIR))
 
 import review_context as rc  # noqa: E402

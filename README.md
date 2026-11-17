@@ -1,11 +1,13 @@
-# Review Playbook
+# diffproof
 
-[![tests](https://github.com/GamatK/review-playbook/actions/workflows/tests.yml/badge.svg)](https://github.com/GamatK/review-playbook/actions/workflows/tests.yml)
+**A pre-merge verification protocol for AI coding agents:** risk-tiered review, diff forensics and evidence-based sign-off.
+
+[![tests](https://github.com/GamatK/diffproof/actions/workflows/tests.yml/badge.svg)](https://github.com/GamatK/diffproof/actions/workflows/tests.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 An [Agent Skill](https://agentskills.io) that makes an AI coding assistant review its own work properly before telling you it's done, and review other people's work when you ask.
 
-Most AI mistakes reach you because the assistant reports "done" from memory of what it meant to do, not from what it actually ran. Review Playbook turns review into a fixed routine:
+Most AI mistakes reach you because the assistant reports "done" from memory of what it meant to do, not from what it actually ran. diffproof turns review into a fixed routine:
 
 1. **Gather evidence** with a bundled script that inspects the real git diff.
 2. **Size the review to the risk**: low, standard or high.
@@ -15,7 +17,7 @@ Most AI mistakes reach you because the assistant reports "done" from memory of w
 
 ## The evidence helper
 
-`skills/review-playbook/scripts/review_context.py` is a small, dependency-free Python script the assistant runs before reviewing. It reads the changes on your branch (committed, uncommitted and untracked) and prints:
+`skills/diffproof/scripts/review_context.py` is a small, dependency-free Python script the assistant runs before reviewing. It reads the changes on your branch (committed, uncommitted and untracked) and prints:
 
 - **A suggested risk level, with reasons.** Changes to authentication, permissions, payments, migrations, secrets or deployment config are marked high risk.
 - **Which checklists apply**, based on the kinds of files that changed.
@@ -59,9 +61,9 @@ It only reads files and never modifies anything, makes no network requests, and 
 You can run it yourself from inside any git repository:
 
 ```bash
-python3 path/to/skills/review-playbook/scripts/review_context.py              # vs. your main branch
-python3 path/to/skills/review-playbook/scripts/review_context.py --base HEAD~3
-python3 path/to/skills/review-playbook/scripts/review_context.py --json
+python3 path/to/skills/diffproof/scripts/review_context.py              # vs. your main branch
+python3 path/to/skills/diffproof/scripts/review_context.py --base HEAD~3
+python3 path/to/skills/diffproof/scripts/review_context.py --json
 ```
 
 Requires Python 3.10 or newer and git.
@@ -82,15 +84,15 @@ Requires Python 3.10 or newer and git.
 ### Claude Code
 
 ```text
-/plugin marketplace add GamatK/review-playbook
-/plugin install review-playbook@gamatk-skills
+/plugin marketplace add GamatK/diffproof
+/plugin install diffproof@gamatk-skills
 ```
 
-Or copy the `skills/review-playbook/` folder into `~/.claude/skills/` (all projects) or `.claude/skills/` in one project.
+Or copy the `skills/diffproof/` folder into `~/.claude/skills/` (all projects) or `.claude/skills/` in one project.
 
 ### Claude apps (web and desktop)
 
-Download this repository as a ZIP, zip the `skills/review-playbook` folder on its own, and upload it in the app's skills settings. The evidence helper runs only where the assistant can execute code; elsewhere the checklists still apply.
+Download this repository as a ZIP, zip the `skills/diffproof` folder on its own, and upload it in the app's skills settings. The evidence helper runs only where the assistant can execute code; elsewhere the checklists still apply.
 
 ### Other assistants
 
@@ -101,7 +103,7 @@ Download this repository as a ZIP, zip the `skills/review-playbook` folder on it
 It triggers on its own when you ask the assistant to review, check, verify or audit something, and before it reports a non-trivial task as done. You can also call it directly:
 
 ```text
-/review-playbook
+/diffproof
 Review this pull request against its description.
 Check this report before I send it to my manager.
 ```
@@ -110,7 +112,7 @@ Check this report before I send it to my manager.
 
 ```text
 .claude-plugin/              plugin and marketplace metadata for Claude Code
-skills/review-playbook/
+skills/diffproof/
   SKILL.md                   the core routine: modes, evidence, risk, rules, verification, report
   references/                checklists, loaded only when relevant
   scripts/review_context.py  the evidence helper

@@ -1,9 +1,9 @@
 ---
-name: review-playbook
-description: Evidence-based review of finished work before it is handed back, or of someone else's work on request. Covers code changes, apps and UI, backends and databases, writing, and research or data analysis. Use when the user says review, check, verify, audit, double-check, "is this ready", or /review-playbook, and before reporting any non-trivial task as done. Not for brainstorming or for work that has not been attempted yet.
+name: diffproof
+description: Evidence-based review of finished work before it is handed back, or of someone else's work on request. Covers code changes, apps and UI, backends and databases, writing, and research or data analysis. Use when the user says review, check, verify, audit, double-check, "is this ready", or /diffproof, and before reporting any non-trivial task as done. Not for brainstorming or for work that has not been attempted yet.
 ---
 
-# Review Playbook
+# diffproof
 
 The mistakes that get through are the ones the author was blind to. Review deliberately, from the real diff and the real output, never from memory of what was intended.
 

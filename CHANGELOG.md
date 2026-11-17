@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 (2026-11-17)
+
+- Renamed from Review Playbook to **diffproof**. The skill, plugin and folder are now `diffproof`; install with `/plugin install diffproof@gamatk-skills` and call it with `/diffproof`.
+
 ## 1.2.0 (2026-11-17)
 
 - Added `scripts/review_context.py`, an evidence helper that reads the git diff and reports a suggested risk level, the checklists that apply, warnings in added lines with file and line (masked possible secrets, skipped tests, disabled checks, unsafe code patterns, destructive SQL, empty catch blocks, leftover debug output), and the project's build, test and lint commands.
