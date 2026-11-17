@@ -7,6 +7,7 @@ Use this mode when the user asks you to review a pull request, diff, file, docum
 - Find out what it is supposed to do: the pull request description, the linked issue, the brief, or ask the user. A review without the goal checks style, not correctness.
 - Note the risk level (see SKILL.md) and which checklists apply.
 - If the work can be run, run it: check out the branch, run the tests, open the screen, recompute the numbers. Findings from running beat findings from reading.
+- For a branch or pull request, run the evidence helper against its target, for example `python3 <skill folder>/scripts/review_context.py --base origin/main`, and use its warnings as a starting list to confirm or dismiss.
 
 ## While reviewing
 

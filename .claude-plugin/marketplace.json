@@ -9,7 +9,7 @@
       "name": "review-playbook",
       "source": "./",
       "description": "Evidence-based review of finished work before it is handed back: code, apps and UI, backends, writing, and research or data.",
-      "version": "1.1.0"
+      "version": "1.2.0"
     }
   ]
 }

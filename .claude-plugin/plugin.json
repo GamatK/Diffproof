@@ -1,13 +1,20 @@
 {
   "name": "review-playbook",
-  "version": "1.1.0",
-  "description": "Evidence-based review of finished work before it is handed back: code, apps and UI, backends, writing, and research or data. Also reviews other people's pull requests and documents.",
+  "version": "1.2.0",
+  "description": "Evidence-based review of finished work before it is handed back: a git-diff evidence helper plus risk-based checklists for code, UI, backends, writing and data. Also reviews other people's pull requests.",
   "author": {
     "name": "Gamat Karimli",
     "url": "https://gamatkarimli.com"
   },
-  "homepage": "https://github.com/GamatK/review-playbook",
-  "repository": "https://github.com/GamatK/review-playbook",
+  "homepage": "https://github.com/GamatK/Claude-Review-Playbook",
+  "repository": "https://github.com/GamatK/Claude-Review-Playbook",
   "license": "MIT",
-  "keywords": ["review", "code-review", "verification", "quality", "checklist", "agent-skills"]
+  "keywords": [
+    "review",
+    "code-review",
+    "verification",
+    "quality",
+    "checklist",
+    "agent-skills"
+  ]
 }
